@@ -59,7 +59,7 @@ The brand kit follows the **"Halo AI Studio"** dark-mode template — a premium,
 | Layer        | Technology          | Rationale                                        |
 | ------------ | ------------------- | ------------------------------------------------ |
 | Framework    | Next.js (App Router)| SSR/SSG, file-based routing, Vercel-native       |
-| Styling      | Tailwind CSS        | Utility-first, monochrome theme, rapid iteration |
+| Styling      | Tailwind CSS v4     | Utility-first, CSS-based config, high performance|
 | Components   | shadcn/ui           | Accessible, composable, professional feel        |
 | Animations   | Framer Motion       | Declarative, performant scroll/enter animations  |
 | Icons        | Lucide React        | Consistent, lightweight icon set                 |
@@ -68,7 +68,7 @@ The brand kit follows the **"Halo AI Studio"** dark-mode template — a premium,
 
 ### Key Technical Decisions
 - **App Router** over Pages Router for modern React Server Components support.
-- **Tailwind CSS** as explicitly requested by the user (monochrome/minimalist theme).
+- **Tailwind CSS v4** as explicitly requested by the user, utilizing the new CSS-based configuration in `app/globals.css`.
 - **Modular Data Strategy:** All resume content, project data, skills, and experience are stored in a central `data/resume.ts` file. UI components consume this data — no hardcoded content in JSX.
 - **shadcn/ui** components will be installed incrementally (only what's needed).
 
@@ -301,7 +301,7 @@ GJE_Portfolio/
 │   ├── images/
 │   └── resume.pdf          # Downloadable resume
 ├── prompt.md               # This file (persistent memory)
-├── tailwind.config.ts
+├── app/globals.css         # Tailwind v4 configuration & base styles
 ├── next.config.ts
 ├── tsconfig.json
 └── package.json
@@ -315,3 +315,4 @@ GJE_Portfolio/
 | ---------- | ---------------------------------------------------- |
 | 2026-03-29 | Initial prompt.md created with full scaffold          |
 | 2026-03-29 | Brand kit analyzed, resume extracted, projects mapped |
+| 2026-04-07 | Updated for Tailwind CSS v4 and hidden via .gitignore |

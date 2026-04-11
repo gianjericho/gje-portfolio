@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# persistent memory
+prompt.md
+AGENTS.md
+CLAUDE.md
+Mountaintop-Dispatch-Manager.md
+projects.md
+jo_app.md
+
+# web app theme
+brandkittemplate.png
