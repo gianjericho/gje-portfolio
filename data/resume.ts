@@ -154,7 +154,7 @@ export const DATA = {
       company: "Mountaintop Cable TV Networks",
       location: "Tagaytay City, Cavite",
       role: "Customer Service Representative & Asst. Warehouse Custodian",
-      period: "July 2025 – March 2026",
+      period: "July 2025 – April 2026",
       description: [
         "Resolved technical inquiries and managed service requests for up to 30 customers daily, identifying operational bottlenecks to inform custom software solutions.",
         "Developed and deployed an automated ticketing system using Google Forms and Apps Script, successfully processing over 4,200 requests and eliminating manual data entry.",
