@@ -92,6 +92,58 @@ export const DATA = {
         "Clean bottom-navigation mobile UI",
       ],
     },
+    {
+      id: "slr-ticket-monitoring",
+      title: "SLR Ticket Monitoring System",
+      description:
+        "A premium Google Apps Script (GAS) solution for managing and monitoring service tickets across multiple municipalities.",
+      longDescription:
+        "Provides a streamlined interface for data entry, real-time validation, and automated reporting within Google Sheets. Features dynamic HTML/CSS sidebars, real-time dashboards for performance tracking, duplicate SF ticket prevention, and Salesforce integration to sync external data imports.",
+      techStack: [
+        "Google Apps Script",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Google Sheets",
+        "Supabase"
+      ],
+      githubUrl: "https://github.com/gianjericho/ticket-monitoring",
+      liveUrl: "",
+      featured: true,
+      category: "web" as const,
+      highlights: [
+        "Dynamic custom HTML/CSS sidebars for data entry",
+        "Real-time Dashboard tracking performance and outages",
+        "Automated duplicate prevention for SF Tickets",
+        "Multi-Sheet Synchronization mapping to municipalities",
+        "Salesforce Integration for easy ticket import"
+      ],
+    },
+    {
+      id: "job-tracker",
+      title: "Job Tracker",
+      description:
+        "A sleek, modern Flutter application offering a centralized dashboard to track work hours and monitor production goals.",
+      longDescription:
+        "Built with Flutter, Firebase, and Material 3, the app provides a centralized dashboard for dynamic progress bars, a smart calendar for daily logs, and effortless logging sheets. Secure real-time data sync is powered by Firebase Authentication and Cloud Firestore, complemented by an auto-update checker.",
+      techStack: [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Provider"
+      ],
+      githubUrl: "https://github.com/gianjericho/job-tracker",
+      liveUrl: "",
+      featured: true,
+      category: "mobile" as const,
+      highlights: [
+        "Centralized Dashboard with customized dynamic progress bars",
+        "Smart Calendar view for daily logs management",
+        "Secure real-time data sync via Firebase Auth and Firestore",
+        "Effortless quick-access hour logging functionality",
+        "Auto-Update checker connected to Firestore config"
+      ],
+    },
   ],
 
   // ===========================================================================
