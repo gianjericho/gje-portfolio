@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: gianjericho/gje-portfolio
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: "public/images" # Media files will be stored in the repo under public/images
+public_folder: "/images" # The src attribute for uploaded media will begin with /images
+
+collections:
+  - name: "resume" # Used in routes, e.g., /admin/collections/resume
+    label: "Resume Data" # Used in the UI
+    files:
+      - file: "data/resume.json"
+        label: "Portfolio Content"
+        name: "portfolio_content"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Initials", name: "initials", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Location", name: "location", widget: "string"}
+          - {label: "Location Link", name: "locationLink", widget: "string"}
+          - {label: "About", name: "about", widget: "text"}
+          - {label: "Summary", name: "summary", widget: "text"}
+          - {label: "Avatar URL", name: "avatarUrl", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "GitHub", name: "github", widget: "string"}
+          - {label: "LinkedIn", name: "linkedin", widget: "string"}
+          - {label: "Resume PDF URL", name: "resumeUrl", widget: "string"}
+          
+          # Projects Array
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Long Description", name: "longDescription", widget: "text"}
+              - {label: "Tech Stack", name: "techStack", widget: "list", field: {label: "Technology", name: "tech", widget: "string"}}
+              - {label: "GitHub URL", name: "githubUrl", widget: "string", required: false}
+              - {label: "Live URL", name: "liveUrl", widget: "string", required: false}
+              - {label: "Featured", name: "featured", widget: "boolean", default: false}
+              - {label: "Category", name: "category", widget: "select", options: ["web", "mobile"]}
+              - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "highlight", widget: "string"}}
+          
+          # Experience Array
+          - label: "Experience"
+            name: "experience"
+            widget: "list"
+            fields:
+              - {label: "Company", name: "company", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Period", name: "period", widget: "string"}
+              - {label: "Description", name: "description", widget: "list", field: {label: "Point", name: "point", widget: "text"}}
+          
+          # Education Array
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - {label: "Institution", name: "institution", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Degree", name: "degree", widget: "string"}
+              - {label: "Period", name: "period", widget: "string"}
+              - {label: "Details", name: "details", widget: "list", field: {label: "Detail", name: "detail", widget: "string"}}
+          
+          # Skills Object
+          - label: "Skills"
+            name: "skills"
+            widget: "object"
+            fields:
+              - {label: "Technical", name: "technical", widget: "list"}
+              - {label: "AI Tools", name: "ai", widget: "list"}
+              - {label: "Software & Tools", name: "tools", widget: "list"}
+              - {label: "Languages", name: "languages", widget: "list"}
+          
+          # Certifications Array
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - {label: "Category", name: "category", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Issuer", name: "issuer", widget: "string"}
