@@ -12,13 +12,6 @@
   "github": "https://github.com/gianjericho",
   "linkedin": "https://www.linkedin.com/in/gian-espino-7a1270167",
   "resumeUrl": "/Resume.pdf",
-  "navLinks": [
-    { "label": "About", "href": "#about" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Skills", "href": "#skills" },
-    { "label": "Contact", "href": "#contact" }
-  ],
   "projects": [
     {
       "id": "dispatch-manager",
@@ -121,6 +114,17 @@
     }
   ],
   "experience": [
+    {
+      "company": "UK-BASED TECH FIRM (Remote)",
+      "location": "United Kingdom",
+      "role": "Lead Gen and AI Workflow Engineer",
+      "period": "July 2025 – Present",
+      "description": [
+        "Execute B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn.",
+        "Architected Claude API workflows to automate personalized outreach and lead qualification.",
+        "Managed executive prospecting and CRM data verification for global outreach campaigns."
+      ]
+    },
     {
       "company": "CONVERGE ICT",
       "location": "Tagaytay City, Cavite",
@@ -249,6 +253,28 @@
           "issuer": "CISCO Networking Academy"
         }
       ]
+    }
+  ],
+  "navLinks": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
     }
   ]
 }
