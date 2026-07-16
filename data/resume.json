@@ -167,8 +167,8 @@
   ],
   "experience": [
     {
-      "company": "Jonathan & Cyber (Israel, Remote)",
-      "location": "Israel",
+      "company": "Jonathan & Cyber (Remote)",
+      "location": "Remote",
       "role": "Contract Full-Stack Software Engineer",
       "period": "July 2026",
       "description": [
@@ -179,12 +179,13 @@
       ]
     },
     {
-      "company": "UK-BASED TECH FIRM (Remote)",
+      "company": "Wiser (Remote)",
       "location": "United Kingdom",
       "role": "Lead Gen and AI Workflow Engineer",
       "period": "July 2025 – Present",
       "description": [
-        "Execute B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn.",
+        "Execute B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn Sales Navigator.",
+        "Orchestrate LinkedIn outreach campaigns and account health checks using EagleRev, Gendo AI, and multi-profile browsers (GoLogin/AdsPower).",
         "Architected Claude API workflows to automate personalized outreach and lead qualification.",
         "Managed executive prospecting and CRM data verification for global outreach campaigns."
       ]
