@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Gian Jericho Espino",
   },
   description:
-    "Computer Engineering student and full-stack developer. Building enterprise-grade web and mobile applications — from real-time dispatch systems to field technician mobile apps.",
+    "Computer Engineer and full-stack developer. Building enterprise-grade web and mobile applications — from real-time dispatch systems to field technician mobile apps.",
   keywords: [
     "Gian Jericho Espino",
     "Portfolio",
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "Gian Jericho Espino — Portfolio",
     description:
-      "Computer Engineering student and full-stack developer building enterprise-grade applications.",
+      "Computer Engineer and full-stack developer building enterprise-grade applications.",
     siteName: "Gian Jericho Espino Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Gian Jericho Espino — Portfolio",
     description:
-      "Computer Engineering student and full-stack developer building enterprise-grade applications.",
+      "Computer Engineer and full-stack developer building enterprise-grade applications.",
   },
   robots: {
     index: true,
