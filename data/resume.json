@@ -111,9 +111,73 @@
         "Effortless quick-access hour logging functionality",
         "Auto-Update checker connected to Firestore config"
       ]
+    },
+    {
+      "id": "kaong-wine-system",
+      "title": "Automated Kaong Wine Brewing System",
+      "description": "An ESP32-powered automated brewing system designed to monitor and regulate sugar palm sap fermentation.",
+      "longDescription": "Developed as an undergraduate thesis to standardize traditional wine-making. The system uses a dual-ESP32 architecture (Controller and Sensor nodes) to coordinate pre-heating, PID-controlled thermal regulation (25–30°C) with quartz heaters and DC fans, yeast dosing, and pasteurization. Features wireless telemetry via the RAPT Pill hydrometer, localized SD logging, HX711 load cells, and a real-time network dashboard.",
+      "techStack": [
+        "ESP32",
+        "C/C++",
+        "PID Control",
+        "RTOS",
+        "I2C/SPI",
+        "Telemetry"
+      ],
+      "githubUrl": "https://github.com/gianjericho/kaong-wine-system",
+      "liveUrl": "",
+      "featured": true,
+      "category": "iot",
+      "highlights": [
+        "Dual-ESP32 architecture over custom UART communication link",
+        "PID temperature regulation with quartz infrared heaters & DC fans",
+        "Wireless Bluetooth/Wi-Fi telemetry using the RAPT Pill floating hydrometer",
+        "Volumetric yeast dosing via BTS7960 driver and 28BYJ-48 stepper motor",
+        "Standalone SPI SD Card logging with built-in CSV corruption prevention",
+        "Hardware protection including physical E-stop multiplexed via MCP23017 IO expander",
+        "Rigorous unit testing plan requiring 10 independent trials with >80% success rate"
+      ]
+    },
+    {
+      "id": "b2b-lead-gen-automation",
+      "title": "B2B Lead Enrichment & Outreach Automation Hub",
+      "description": "A robust automation pipeline orchestrating Chrome browser actions, AppleScript, API integrations, and local data verification.",
+      "longDescription": "Built to streamline lead qualification for remote outreach campaigns. Designed a macOS-native execution loop that orchestrates browser automation (via AppleScript) to search corporate sites, queries Prospeo API for fallback personal emails, runs a local rule-based text scoring engine to verify leads, and syncs batches directly to a Google Sheets Lead Gen Hub. Implemented in-memory caching to bypass Google Sheets API rate-limiting.",
+      "techStack": [
+        "Python",
+        "AppleScript",
+        "Google Sheets API",
+        "Prospeo API",
+        "Chrome Automation",
+        "Data Enrichment"
+      ],
+      "githubUrl": "https://github.com/gianjericho",
+      "liveUrl": "",
+      "featured": true,
+      "category": "automation",
+      "highlights": [
+        "Consolidated AppleScript and Chrome orchestration to bypass CAPTCHA checks",
+        "Batch synchronization to Google Sheets via service accounts with API rate-limit caching",
+        "Local, zero-cost keyword scoring engine replacing expensive external LLM API queries",
+        "Processed and deduplicated over 4,100 active leads for high-conversion outreach",
+        "Integrated Prospeo API fallback pipeline for personal email extraction"
+      ]
     }
   ],
   "experience": [
+    {
+      "company": "Jonathan & Cyber (Israel, Remote)",
+      "location": "Israel",
+      "role": "Contract Full-Stack Software Engineer",
+      "period": "July 2026",
+      "description": [
+        "Engineered real-time SIEM/SOC dashboard features using Next.js and Supabase, implementing complex Exposed Vulnerabilities filtering arrays.",
+        "Configured Google Cloud service accounts and direct Google Sheets API integrations to automate QA bug-tracking updates.",
+        "Conducted a comprehensive codebase and infrastructure readiness audit, identifying critical data migration, mock animation, and production backup gaps.",
+        "Shipped localized database migrations (SQL schema updates) and seeded realistic test datasets to establish a production-matching preview environment."
+      ]
+    },
     {
       "company": "UK-BASED TECH FIRM (Remote)",
       "location": "United Kingdom",
@@ -173,6 +237,9 @@
   ],
   "skills": {
     "technical": [
+      "TypeScript",
+      "Next.js",
+      "Flutter",
       "Dart",
       "Python",
       "C++",
@@ -209,8 +276,16 @@
   },
   "certifications": [
     {
-      "category": "Data Analytics",
+      "category": "Data Analytics & AI",
       "items": [
+        {
+          "name": "Natural Language Processing Specialization",
+          "issuer": "Coursera"
+        },
+        {
+          "name": "Deep Learning with TensorFlow",
+          "issuer": "IBM / Cognitive Class"
+        },
         {
           "name": "Data Analytics Essentials",
           "issuer": "CISCO Networking Academy"
@@ -220,37 +295,50 @@
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Deep Learning Specialization: Advanced AI",
+          "name": "The Ultimate Guide to ChatGPT and AI",
           "issuer": "Udemy"
-        },
-        {
-          "name": "Deep Learning with TensorFlow",
-          "issuer": "Cognitive Class"
-        },
-        {
-          "name": "Natural Language Processing Using Deep Learning",
-          "issuer": "Analytics Vidhya"
         }
       ]
     },
     {
-      "category": "AI & Networking",
+      "category": "Networking & Security",
       "items": [
         {
-          "name": "AI Fundamentals With IBM Skills Build",
+          "name": "Networking Essentials",
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Networking Basics",
+          "name": "Cybersecurity Essentials",
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Cyber Threat Management",
+          "name": "Introduction to Cybersecurity",
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Network Defense",
+          "name": "Getting Started with Cisco Packet Tracer",
           "issuer": "CISCO Networking Academy"
+        }
+      ]
+    },
+    {
+      "category": "Embedded & Software Systems",
+      "items": [
+        {
+          "name": "Embedded Systems & IoT Joint Program",
+          "issuer": "Universiti Teknologi MARA & Cavite State University"
+        },
+        {
+          "name": "Software Engineering Specialization",
+          "issuer": "College of Engineering and Information Technology, CvSU"
+        },
+        {
+          "name": "Foundations of User Experience (UX) Design",
+          "issuer": "Google via Coursera"
+        },
+        {
+          "name": "Google Analytics Certificate",
+          "issuer": "Google"
         }
       ]
     }

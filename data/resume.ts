@@ -15,7 +15,7 @@ export type Project = {
   githubUrl: string;
   liveUrl: string;
   featured: boolean;
-  category: "web" | "mobile";
+  category: "web" | "mobile" | "iot" | "automation";
   highlights: string[];
 };
 

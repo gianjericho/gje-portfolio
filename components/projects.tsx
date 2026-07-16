@@ -11,14 +11,18 @@ import {
   ChevronUp,
   Globe,
   Smartphone,
+  Cpu,
+  Workflow,
 } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
 
-type Category = "all" | "web" | "mobile";
+type Category = "all" | "web" | "mobile" | "iot" | "automation";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   web: <Globe className="w-3.5 h-3.5" />,
   mobile: <Smartphone className="w-3.5 h-3.5" />,
+  iot: <Cpu className="w-3.5 h-3.5" />,
+  automation: <Workflow className="w-3.5 h-3.5" />,
 };
 
 export function Projects() {
@@ -29,6 +33,8 @@ export function Projects() {
     { label: "All", value: "all" },
     { label: "Web", value: "web" },
     { label: "Mobile", value: "mobile" },
+    { label: "IoT", value: "iot" },
+    { label: "Automation", value: "automation" },
   ];
 
   const filteredProjects =

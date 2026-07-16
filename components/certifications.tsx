@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { DATA } from "@/data/resume";
 import { SectionHeading } from "./section-heading";
-import { Award, ShieldCheck } from "lucide-react";
+import { Award, ShieldCheck, Cpu } from "lucide-react";
 
 const categoryIcons: Record<string, React.ReactNode> = {
-  "Data Analytics": <Award className="w-4 h-4" />,
-  "AI & Networking": <ShieldCheck className="w-4 h-4" />,
+  "Data Analytics & AI": <Award className="w-4 h-4" />,
+  "Networking & Security": <ShieldCheck className="w-4 h-4" />,
+  "Embedded & Software Systems": <Cpu className="w-4 h-4" />,
 };
 
 export function Certifications() {
@@ -19,7 +20,7 @@ export function Certifications() {
           subtitle="Professional credentials and completed specializations."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {DATA.certifications.map((group, i) => (
             <motion.div
               key={group.category}
