@@ -1,6 +1,6 @@
 import { DATA } from "@/data/resume";
 import { Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon, YoutubeIcon } from "@/components/icons";
 
 export function Footer() {
   return (
@@ -41,6 +41,15 @@ export function Footer() {
             aria-label="LinkedIn"
           >
             <LinkedinIcon className="w-4 h-4" />
+          </a>
+          <a
+            href={DATA.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+            aria-label="YouTube"
+          >
+            <YoutubeIcon className="w-4 h-4" />
           </a>
           <a
             href={`mailto:${DATA.email}`}

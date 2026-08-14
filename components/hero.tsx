@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { DATA } from "@/data/resume";
 import { ArrowRight, Download, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon, YoutubeIcon } from "@/components/icons";
 
 const container = {
   hidden: { opacity: 0 },
@@ -129,6 +129,15 @@ export function Hero() {
             aria-label="LinkedIn"
           >
             <LinkedinIcon className="w-5 h-5" />
+          </a>
+          <a
+            href={DATA.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            aria-label="YouTube"
+          >
+            <YoutubeIcon className="w-5 h-5" />
           </a>
           <a
             href={`mailto:${DATA.email}`}

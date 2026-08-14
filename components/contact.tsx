@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { DATA } from "@/data/resume";
 import { SectionHeading } from "./section-heading";
 import { Mail, Phone, ArrowUpRight } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon, YoutubeIcon } from "@/components/icons";
 
 export function Contact() {
   return (
@@ -97,6 +97,15 @@ export function Contact() {
               >
                 <LinkedinIcon className="w-4 h-4" />
                 LinkedIn
+              </a>
+              <a
+                href={DATA.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors animated-underline"
+              >
+                <YoutubeIcon className="w-4 h-4" />
+                YouTube
               </a>
             </div>
           </div>
