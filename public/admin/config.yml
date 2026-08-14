@@ -21,11 +21,11 @@ collections:
           - {label: "Location Link", name: "locationLink", widget: "string"}
           - {label: "About", name: "about", widget: "text"}
           - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Avatar URL", name: "avatarUrl", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone", name: "phone", widget: "string"}
           - {label: "GitHub", name: "github", widget: "string"}
           - {label: "LinkedIn", name: "linkedin", widget: "string"}
+          - {label: "YouTube", name: "youtube", widget: "string"}
           - {label: "Resume PDF URL", name: "resumeUrl", widget: "string"}
           
           # Projects Array
@@ -41,7 +41,7 @@ collections:
               - {label: "GitHub URL", name: "githubUrl", widget: "string", required: false}
               - {label: "Live URL", name: "liveUrl", widget: "string", required: false}
               - {label: "Featured", name: "featured", widget: "boolean", default: false}
-              - {label: "Category", name: "category", widget: "select", options: ["web", "mobile"]}
+              - {label: "Category", name: "category", widget: "select", options: ["web", "mobile", "iot", "automation", "media"]}
               - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "highlight", widget: "string"}}
           
           # Experience Array
@@ -75,6 +75,7 @@ collections:
               - {label: "AI Tools", name: "ai", widget: "list"}
               - {label: "Software & Tools", name: "tools", widget: "list"}
               - {label: "Languages", name: "languages", widget: "list"}
+              - {label: "Content & Media", name: "media", widget: "list"}
           
           # Certifications Array
           - label: "Certifications"
@@ -88,3 +89,11 @@ collections:
                 fields:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Issuer", name: "issuer", widget: "string"}
+
+          # Nav Links Array
+          - label: "Nav Links"
+            name: "navLinks"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "Href", name: "href", widget: "string"}
