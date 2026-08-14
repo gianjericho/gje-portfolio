@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { DATA, type ResumeData } from "../../data/resume";
-import { select, MAX_PROJECT_HIGHLIGHTS } from "./select";
+import { select, MAX_PROJECT_HIGHLIGHTS, toPdfSafe } from "./select";
 
 function fixture(overrides: Partial<ResumeData> = {}): ResumeData {
   return {
@@ -153,4 +153,46 @@ test("every real employer survives curation", () => {
   for (const employer of ["Jonathan & Cyber", "EagleRev", "Wiser", "CONVERGE ICT"]) {
     assert.ok(companies.includes(employer), `curation dropped ${employer}`);
   }
+});
+
+test("toPdfSafe replaces arrows react-pdf's non-embedded fonts can't render", () => {
+  const input = "a hook → context → twist → payoff";
+  const output = toPdfSafe(input);
+  assert.ok(!output.includes("→"), "arrow character must not survive");
+  assert.equal(output, "a hook -> context -> twist -> payoff");
+});
+
+test("toPdfSafe leaves WinAnsi-safe punctuation untouched", () => {
+  // em dash, en dash, curly quotes, and the middle dot are all representable
+  // in react-pdf's default WinAnsiEncoding and must not be substituted.
+  const input = "em—dash en–dash ‘curly’ “quotes” middle·dot";
+  assert.equal(toPdfSafe(input), input);
+});
+
+test("toPdfSafe falls back to a visible placeholder for unanticipated symbols", () => {
+  assert.equal(toPdfSafe("emoji 🚀 rocket"), "emoji ? rocket");
+});
+
+test("select() sanitizes arrows out of project highlights end to end", () => {
+  const result = select(
+    fixture({
+      projects: [
+        {
+          id: "arrow-project",
+          title: "Arrow Project",
+          description: "short",
+          longDescription: "long",
+          techStack: ["A"],
+          githubUrl: "",
+          liveUrl: "",
+          featured: true,
+          category: "web",
+          highlights: ["hook → context → twist → payoff", "h2"],
+        },
+      ],
+    }),
+  );
+  const rendered = result.projects[0].highlights.join(" ");
+  assert.ok(!rendered.includes("→"), "arrow must not reach the PDF layer");
+  assert.ok(rendered.includes("->"), "arrow should be substituted with an ASCII arrow");
 });
