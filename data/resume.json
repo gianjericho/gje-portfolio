@@ -6,11 +6,11 @@
   "locationLink": "https://www.google.com/maps/place/Cavite",
   "about": "A Computer Engineer who builds enterprise-grade web and mobile applications. I specialize in transforming real-world operational bottlenecks into automated, scalable software solutions — from real-time dispatch systems to field technician mobile apps.",
   "summary": "Currently completing my BS in Computer Engineering at Cavite State University, I've already shipped production systems that process thousands of requests. I bridge the gap between engineering theory and practical field deployment, with a focus on full-stack web development, mobile apps, and data analytics.",
-  "avatarUrl": "/images/avatar.jpg",
   "email": "gianjerichoz@gmail.com",
   "phone": "+639108733830",
   "github": "https://github.com/gianjericho",
   "linkedin": "https://www.linkedin.com/in/gian-espino-7a1270167",
+  "youtube": "https://www.youtube.com/@yourdailykawaii",
   "resumeUrl": "/Resume.pdf",
   "projects": [
     {
@@ -273,6 +273,14 @@
     "languages": [
       "English",
       "Tagalog"
+    ],
+    "media": [
+      "Short-Form Video Production",
+      "Retention Editing",
+      "Scriptwriting & Hooks",
+      "Sound Design",
+      "AI Voiceover (ElevenLabs)",
+      "YouTube Shorts Strategy"
     ]
   },
   "certifications": [

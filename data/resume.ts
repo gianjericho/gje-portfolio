@@ -15,7 +15,7 @@ export type Project = {
   githubUrl: string;
   liveUrl: string;
   featured: boolean;
-  category: "web" | "mobile" | "iot" | "automation";
+  category: "web" | "mobile" | "iot" | "automation" | "media";
   highlights: string[];
 };
 
@@ -48,11 +48,11 @@ export type ResumeData = {
   locationLink: string;
   about: string;
   summary: string;
-  avatarUrl: string;
   email: string;
   phone: string;
   github: string;
   linkedin: string;
+  youtube: string;
   resumeUrl: string;
   navLinks: { label: string; href: string }[];
   projects: Project[];
@@ -63,6 +63,7 @@ export type ResumeData = {
     ai: string[];
     tools: string[];
     languages: string[];
+    media: string[];
   };
   certifications: CertificationCategory[];
 };
