@@ -50,10 +50,9 @@ test("Wiser engagement is closed out at June 2026", () => {
   assert.equal(wiser?.period, "July 2025 – June 2026");
 });
 
-test("exactly one engagement is ongoing", () => {
+test("all engagements are closed out with past periods", () => {
   const ongoing = DATA.experience.filter((e) => e.period.includes("Present"));
-  assert.equal(ongoing.length, 1, "only Jonathan & Cyber should be marked Present");
-  assert.ok(ongoing[0].company.startsWith("Jonathan & Cyber"));
+  assert.equal(ongoing.length, 0, "no roles should be marked Present");
 });
 
 test("closed roles do not describe themselves in present tense", () => {
@@ -72,7 +71,7 @@ test("closed roles do not describe themselves in present tense", () => {
 test("the CYBEREYE engagement reflects its real scope", () => {
   const current = DATA.experience.find((e) => e.company.startsWith("Jonathan & Cyber"));
   assert.ok(current, "expected a Jonathan & Cyber experience entry");
-  assert.equal(current.period, "July 2026 – Present");
+  assert.equal(current.period, "July 2026");
   assert.ok(
     current.description.length >= 5,
     "four bullets undersold a month of production security work",

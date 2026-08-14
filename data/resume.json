@@ -194,7 +194,7 @@
       "company": "Jonathan & Cyber (Remote)",
       "location": "Remote",
       "role": "Contract Full-Stack Software Engineer",
-      "period": "July 2026 – Present",
+      "period": "July 2026",
       "description": [
         "Built the multi-cloud posture layer for a multi-tenant security platform, wiring AWS Security Hub/GuardDuty, Azure Defender for Cloud, and GCP Security Command Center into a tenant-scoped findings pipeline.",
         "Shipped the platform's first outbound integration — SIEM forwarding that pushes findings into customer-owned Splunk (HEC) and Microsoft Sentinel (Logs Ingestion API) instances.",
