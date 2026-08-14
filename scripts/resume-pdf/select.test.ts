@@ -129,6 +129,25 @@ test("throws when there is no experience", () => {
   assert.throws(() => select(fixture({ experience: [] })), /experience/);
 });
 
+test("throws when the title is missing", () => {
+  assert.throws(() => select(fixture({ title: "" })), /title/);
+});
+
+test("throws when the summary is missing", () => {
+  assert.throws(() => select(fixture({ summary: "   " })), /summary/);
+});
+
+test("returns copies, not aliases into the input", () => {
+  const input = fixture();
+  const result = select(input);
+  result.experience[0].description.push("mutated");
+  result.projects[0].techStack.push("mutated");
+  result.skills[0].items.push("mutated");
+  assert.deepEqual(input.experience[0].description, ["a"]);
+  assert.deepEqual(input.projects[0].techStack, ["A"]);
+  assert.deepEqual(input.skills.technical, ["TypeScript"]);
+});
+
 test("every real employer survives curation", () => {
   const companies = select(DATA).experience.map((e) => e.company).join(" ");
   for (const employer of ["Jonathan & Cyber", "EagleRev", "Wiser", "CONVERGE ICT"]) {

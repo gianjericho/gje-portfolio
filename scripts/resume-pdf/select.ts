@@ -42,7 +42,14 @@ function requireText(value: string | undefined, field: string): string {
 
 export function select(data: ResumeData): ResumePdfData {
   requireText(data.name, "name");
+  requireText(data.title, "title");
+  requireText(data.location, "location");
   requireText(data.email, "email");
+  requireText(data.phone, "phone");
+  requireText(data.github, "github");
+  requireText(data.linkedin, "linkedin");
+  requireText(data.youtube, "youtube");
+  requireText(data.summary, "summary");
   if (!data.experience || data.experience.length === 0) {
     throw new Error("resume.json is missing a required field: experience");
   }
@@ -62,13 +69,13 @@ export function select(data: ResumeData): ResumePdfData {
       location: e.location,
       role: e.role,
       period: e.period,
-      description: e.description,
+      description: [...e.description],
     })),
     projects: data.projects
       .filter((p) => p.featured)
       .map((p) => ({
         title: p.title,
-        techStack: p.techStack,
+        techStack: [...p.techStack],
         highlights: p.highlights.slice(0, MAX_PROJECT_HIGHLIGHTS),
       })),
     education: data.education.map((e) => ({
@@ -76,9 +83,13 @@ export function select(data: ResumeData): ResumePdfData {
       degree: e.degree,
       period: e.period,
     })),
+    // `?? 0` guards against malformed JSON surviving the unchecked `rawData as
+    // ResumeData` cast in data/resume.ts — not required by strict mode itself,
+    // since keyof ResumeData["skills"] only resolves to non-optional string[]
+    // properties, but a defensive runtime guard against bad data.
     skills: SKILL_GROUPS.filter((g) => (data.skills[g.key]?.length ?? 0) > 0).map((g) => ({
       label: g.label,
-      items: data.skills[g.key],
+      items: [...data.skills[g.key]],
     })),
     certificationsLine: data.certifications
       .flatMap((c) => c.items.map((i) => i.name))
