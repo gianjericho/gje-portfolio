@@ -13,16 +13,26 @@ import {
   Smartphone,
   Cpu,
   Workflow,
+  Video,
 } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
 
-type Category = "all" | "web" | "mobile" | "iot" | "automation";
+type Category = "all" | "web" | "mobile" | "iot" | "automation" | "media";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   web: <Globe className="w-3.5 h-3.5" />,
   mobile: <Smartphone className="w-3.5 h-3.5" />,
   iot: <Cpu className="w-3.5 h-3.5" />,
   automation: <Workflow className="w-3.5 h-3.5" />,
+  media: <Video className="w-3.5 h-3.5" />,
+};
+
+const categoryLabels: Record<Exclude<Category, "all">, string> = {
+  web: "Web Application",
+  mobile: "Mobile Application",
+  iot: "IoT System",
+  automation: "Automation Pipeline",
+  media: "Media Project",
 };
 
 export function Projects() {
@@ -35,6 +45,7 @@ export function Projects() {
     { label: "Mobile", value: "mobile" },
     { label: "IoT", value: "iot" },
     { label: "Automation", value: "automation" },
+    { label: "Media", value: "media" },
   ];
 
   const filteredProjects =
@@ -95,22 +106,24 @@ export function Projects() {
                           {project.title}
                         </h3>
                         <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">
-                          {project.category} Application
+                          {categoryLabels[project.category]}
                         </span>
                       </div>
                     </div>
 
                     {/* Links */}
                     <div className="flex items-center gap-2">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-border bg-background text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
-                        aria-label={`View ${project.title} on GitHub`}
-                      >
-                        <GithubIcon className="w-4 h-4" />
-                      </a>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-border bg-background text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+                          aria-label={`View ${project.title} on GitHub`}
+                        >
+                          <GithubIcon className="w-4 h-4" />
+                        </a>
+                      )}
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}

@@ -163,6 +163,30 @@
         "Processed and deduplicated over 4,100 active leads for high-conversion outreach",
         "Integrated Prospeo API fallback pipeline for personal email extraction"
       ]
+    },
+    {
+      "id": "your-daily-kawaii",
+      "title": "Your Daily Kawaii — YouTube Shorts Channel",
+      "description": "A faceless short-form video channel built on a retention-first production pipeline, from sourcing and scripting through editing and analytics.",
+      "longDescription": "An independently operated YouTube Shorts channel where every upload runs through a repeatable pipeline: sourcing raw footage traced back to original posters, scripting on a hook–context–twist–payoff structure, AI voiceover synthesis, and retention-focused editing. Performance is iterated against view-versus-swipe-away and average-view-duration signals rather than vanity counts, and every upload is transformed enough to stay clear of YouTube's reused-content and inauthentic-content policies.",
+      "techStack": [
+        "CapCut",
+        "ElevenLabs",
+        "Google AI Studio",
+        "Cobalt.tools",
+        "YouTube Studio"
+      ],
+      "githubUrl": "",
+      "liveUrl": "https://www.youtube.com/@yourdailykawaii",
+      "featured": true,
+      "category": "media",
+      "highlights": [
+        "Retention-first scripting on a hook → context → twist → payoff structure",
+        "Editing for retention: dead-air removal, centered auto-captions, sound design, and dynamic framing",
+        "AI voiceover synthesis via ElevenLabs with ideation support from Google AI Studio",
+        "Iteration driven by view-versus-swipe-away and average-view-duration signals",
+        "Rights-safe source transformation to stay within monetization policy"
+      ]
     }
   ],
   "experience": [

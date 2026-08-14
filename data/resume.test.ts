@@ -94,3 +94,28 @@ test("the lead-gen project links to its real repository", () => {
   const leadGen = DATA.projects.find((p) => p.id === "b2b-lead-gen-automation");
   assert.equal(leadGen?.githubUrl, "https://github.com/gianjericho/Lead-Gen");
 });
+
+test("the YouTube channel is a featured media project with no repo link", () => {
+  const channel = DATA.projects.find((p) => p.id === "your-daily-kawaii");
+  assert.ok(channel, "expected a your-daily-kawaii project entry");
+  assert.equal(channel.category, "media");
+  assert.equal(channel.liveUrl, "https://www.youtube.com/@yourdailykawaii");
+  assert.equal(channel.githubUrl, "", "yt-automation is unrelated to this channel");
+  assert.equal(channel.featured, true);
+  assert.ok(channel.highlights.length >= 4);
+});
+
+test("no project cites channel growth metrics", () => {
+  const channel = DATA.projects.find((p) => p.id === "your-daily-kawaii");
+  const text = [
+    channel?.description ?? "",
+    channel?.longDescription ?? "",
+    ...(channel?.highlights ?? []),
+  ].join(" ");
+  for (const term of ["subscriber", "monetized", "views"]) {
+    assert.ok(
+      !text.toLowerCase().includes(term),
+      `metrics go stale in JSON and are out of scope, found "${term}"`,
+    );
+  }
+});

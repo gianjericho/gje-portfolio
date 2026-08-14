@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { DATA } from "@/data/resume";
 import { SectionHeading } from "./section-heading";
-import { Code2, Bot, Wrench, Languages } from "lucide-react";
+import { Code2, Bot, Wrench, Languages, Video } from "lucide-react";
 
 const skillCategories = [
   {
@@ -25,6 +25,11 @@ const skillCategories = [
     key: "languages" as const,
     label: "Languages",
     icon: <Languages className="w-4 h-4" />,
+  },
+  {
+    key: "media" as const,
+    label: "Content & Media",
+    icon: <Video className="w-4 h-4" />,
   },
 ];
 
