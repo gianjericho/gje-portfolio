@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# subagent-driven-development scratch (ledger, briefs, review packages)
+/.superpowers/
+
 # next.js
 /.next/
 /out/
