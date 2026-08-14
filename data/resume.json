@@ -5,7 +5,7 @@
   "location": "Cavite, Philippines",
   "locationLink": "https://www.google.com/maps/place/Cavite",
   "about": "A Computer Engineer who builds enterprise-grade web and mobile applications. I specialize in transforming real-world operational bottlenecks into automated, scalable software solutions — from real-time dispatch systems to field technician mobile apps.",
-  "summary": "BS Computer Engineering grad shipping production web, mobile, cloud security, and embedded IoT systems.",
+  "summary": "I hold a BS in Computer Engineering from Cavite State University and have shipped production systems that process thousands of requests. I bridge the gap between engineering theory and practical field deployment, working across full-stack web development, mobile apps, cloud security integrations, and embedded IoT.",
   "email": "gianjerichoz@gmail.com",
   "phone": "+639108733830",
   "github": "https://github.com/gianjericho",
@@ -29,7 +29,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/Mountaintop-Dispatch-Manager",
       "liveUrl": "https://mountaintop-dispatch-manager.netlify.app/",
-      "featured": false,
+      "featured": true,
       "category": "web",
       "highlights": [
         "Role-Based Access Control (RBAC) with row-level security",
@@ -54,7 +54,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/jo_app",
       "liveUrl": "",
-      "featured": false,
+      "featured": true,
       "category": "mobile",
       "highlights": [
         "Interactive Google Maps with client location pins",
@@ -79,7 +79,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/ticket-monitoring",
       "liveUrl": "",
-      "featured": false,
+      "featured": true,
       "category": "web",
       "highlights": [
         "Dynamic custom HTML/CSS sidebars for data entry",
@@ -102,7 +102,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/job-tracker",
       "liveUrl": "",
-      "featured": false,
+      "featured": true,
       "category": "mobile",
       "highlights": [
         "Centralized Dashboard with customized dynamic progress bars",
@@ -127,7 +127,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/kaong-wine-system",
       "liveUrl": "",
-      "featured": false,
+      "featured": true,
       "category": "iot",
       "highlights": [
         "Dual-ESP32 architecture over custom UART communication link",
@@ -154,7 +154,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/Lead-Gen",
       "liveUrl": "",
-      "featured": false,
+      "featured": true,
       "category": "automation",
       "highlights": [
         "Consolidated AppleScript and Chrome orchestration to bypass CAPTCHA checks",
@@ -182,7 +182,7 @@
       "category": "media",
       "highlights": [
         "Retention-first scripting on a hook → context → twist → payoff structure",
-        "Editing for retention: dead-air removal, captions, sound design, and framing",
+        "Editing for retention: dead-air removal, centered auto-captions, sound design, and dynamic framing",
         "AI voiceover synthesis via ElevenLabs with ideation support from Google AI Studio",
         "Iteration driven by view-versus-swipe-away and average-view-duration signals",
         "Rights-safe source transformation to stay within monetization policy"
@@ -196,11 +196,12 @@
       "role": "Contract Full-Stack Software Engineer",
       "period": "July 2026 – Present",
       "description": [
-        "Built the multi-cloud posture layer wiring AWS Security Hub, Azure Defender, and GCP SCC into one findings pipeline.",
-        "Shipped the platform's first outbound integration: SIEM forwarding to customer-owned Splunk and Microsoft Sentinel.",
-        "Delivered a vendor risk module covering supply chain mapping, breach monitoring, and scheduled re-scans.",
-        "Built phishing simulation with real delivery and open-tracking via scoped Microsoft Graph permissions.",
-        "Fixed a silent SSL certificate-expiry defect affecting every live customer and closed a row-level security gap."
+        "Built the multi-cloud posture layer for a multi-tenant security platform, wiring AWS Security Hub/GuardDuty, Azure Defender for Cloud, and GCP Security Command Center into a tenant-scoped findings pipeline.",
+        "Shipped the platform's first outbound integration — SIEM forwarding that pushes findings into customer-owned Splunk (HEC) and Microsoft Sentinel (Logs Ingestion API) instances.",
+        "Delivered a vendor risk intelligence module covering supply chain mapping, compliance mentions, breach monitoring, scheduled re-scans, and risk-score history.",
+        "Built phishing simulation with real delivery and open-tracking through scoped Microsoft Graph permissions, after diagnosing and abandoning a blocked third-party mail provider.",
+        "Integrated Monday.com bi-directionally on production with per-customer field visibility controls, syncing engagement work plans into the customer-facing portal.",
+        "Found and fixed a silent SSL certificate-expiry defect affecting every live customer, authored the Postgres migrations, closed a row-level security gap, and promoted releases through GitHub Actions CI on a Next.js/Supabase/Vercel stack."
       ]
     },
     {
@@ -209,9 +210,10 @@
       "role": "Client Communications and Outreach Specialist",
       "period": "June 2026",
       "description": [
-        "Served as the main point of contact for EagleRev clients on LinkedIn outreach and campaign setup.",
-        "Managed LinkedIn account health across a multi-profile browser fleet, triaging restricted accounts.",
-        "Ran end-to-end campaign QA: variable mapping against source CSVs, message previews, and send scheduling."
+        "Served as the guide and primary point of contact for EagleRev's clients, walking them through LinkedIn outreach operations, campaign setup, and account questions.",
+        "Managed LinkedIn account health across a multi-profile browser fleet (GoLogin, AdsPower), triaging disconnected, restricted, and credit-exhausted accounts.",
+        "Built targeted prospect lists in Sales Navigator and manually qualified them to protect sender accounts from platform restriction.",
+        "Ran end-to-end campaign QA — variable mapping against source CSVs, message previews, and send scheduling — before release."
       ]
     },
     {
@@ -220,7 +222,10 @@
       "role": "Lead Gen and AI Workflow Engineer",
       "period": "July 2025 – June 2026",
       "description": [
-        "Ran B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn Sales Navigator."
+        "Executed B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn Sales Navigator.",
+        "Orchestrated LinkedIn outreach campaigns and account health checks using Gendo AI and multi-profile browsers (GoLogin/AdsPower).",
+        "Architected Claude API workflows to automate personalized outreach and lead qualification.",
+        "Managed executive prospecting and CRM data verification for global outreach campaigns."
       ]
     },
     {
@@ -229,7 +234,10 @@
       "role": "Customer Service Representative and Warehouse Custodian",
       "period": "July 2025 – May 2026",
       "description": [
-        "Built an automated Google Apps Script ticketing system that processed 4,200+ requests, eliminating manual entry."
+        "Resolved technical inquiries and managed service requests for up to 30 customers daily, identifying operational bottlenecks to inform custom software solutions.",
+        "Developed and deployed an automated ticketing system using Google Forms and Apps Script, successfully processing over 4,200 requests and eliminating manual data entry.",
+        "Managed tracking for telecom hardware, generating over 50 comprehensive reports and ensuring 100% accurate logging of equipment dispatched to field technicians.",
+        "Conceptualized and built the Mountaintop-Dispatch-Manager and Job Order Mobile App based on direct field and warehouse operational needs."
       ]
     },
     {
@@ -237,7 +245,10 @@
       "location": "Indang, Cavite",
       "role": "Committee Member, Operations and Implementation",
       "period": "September 2024 – June 2025",
-      "description": []
+      "description": [
+        "Facilitated technical setups and managed operational logistics for college-wide engineering events and activities.",
+        "Coordinated with student teams and faculty to ensure the smooth execution of departmental operations and technical implementations."
+      ]
     }
   ],
   "education": [
@@ -287,22 +298,22 @@
       "ElevenLabs"
     ],
     "tools": [
-      "Git/GitHub",
+      "Git / GitHub",
       "VS Code",
       "PyCharm",
-      "Jupyter",
-      "Apps Script",
-      "G Workspace",
-      "MS Office",
+      "Jupyter Notebook",
+      "Google Apps Script",
+      "Google Workspace",
+      "Microsoft Office",
       "Salesforce",
-      "OBS",
+      "OBS Studio",
       "Firebase",
       "Supabase",
       "Vercel",
-      "Postgres RLS",
-      "Actions",
-      "Graph API",
-      "Monday",
+      "PostgreSQL / Row-Level Security",
+      "GitHub Actions",
+      "Microsoft Graph API",
+      "Monday.com API",
       "Splunk",
       "Wazuh"
     ],
@@ -324,7 +335,7 @@
       "category": "Data Analytics & AI",
       "items": [
         {
-          "name": "Natural Language Processing",
+          "name": "Natural Language Processing Specialization",
           "issuer": "Coursera"
         },
         {
@@ -336,11 +347,11 @@
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Intro to Data Science",
+          "name": "Introduction to Data Science",
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Ultimate Guide to ChatGPT and AI",
+          "name": "The Ultimate Guide to ChatGPT and AI",
           "issuer": "Udemy"
         }
       ]
@@ -357,11 +368,11 @@
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Intro to Cybersecurity",
+          "name": "Introduction to Cybersecurity",
           "issuer": "CISCO Networking Academy"
         },
         {
-          "name": "Cisco Packet Tracer",
+          "name": "Getting Started with Cisco Packet Tracer",
           "issuer": "CISCO Networking Academy"
         }
       ]
@@ -370,7 +381,7 @@
       "category": "Embedded & Software Systems",
       "items": [
         {
-          "name": "Embedded Systems & IoT",
+          "name": "Embedded Systems & IoT Joint Program",
           "issuer": "Universiti Teknologi MARA & Cavite State University"
         },
         {
@@ -378,11 +389,11 @@
           "issuer": "College of Engineering and Information Technology, CvSU"
         },
         {
-          "name": "UX Design Foundations",
+          "name": "Foundations of User Experience (UX) Design",
           "issuer": "Google via Coursera"
         },
         {
-          "name": "Google Analytics",
+          "name": "Google Analytics Certificate",
           "issuer": "Google"
         }
       ]
