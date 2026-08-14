@@ -54,7 +54,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/jo_app",
       "liveUrl": "",
-      "featured": true,
+      "featured": false,
       "category": "mobile",
       "highlights": [
         "Interactive Google Maps with client location pins",
@@ -79,7 +79,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/ticket-monitoring",
       "liveUrl": "",
-      "featured": true,
+      "featured": false,
       "category": "web",
       "highlights": [
         "Dynamic custom HTML/CSS sidebars for data entry",
@@ -102,7 +102,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/job-tracker",
       "liveUrl": "",
-      "featured": true,
+      "featured": false,
       "category": "mobile",
       "highlights": [
         "Centralized Dashboard with customized dynamic progress bars",
@@ -154,7 +154,7 @@
       ],
       "githubUrl": "https://github.com/gianjericho/Lead-Gen",
       "liveUrl": "",
-      "featured": true,
+      "featured": false,
       "category": "automation",
       "highlights": [
         "Consolidated AppleScript and Chrome orchestration to bypass CAPTCHA checks",

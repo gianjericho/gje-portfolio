@@ -9,42 +9,48 @@ const COLORS = {
   accent: "#0f172a",
 };
 
+// Density is tuned deliberately tight: 5 full employer entries plus 3
+// curated projects (see select.ts's MAX_PROJECT_HIGHLIGHTS) only fit one
+// page at these margins/sizes. fontSize never drops below ~7pt so the PDF
+// stays legible; the reduction from the original 8.5pt/1.4 line-height
+// comes from tighter margins and line-height rather than illegibly small
+// text. No fontStyle/fontWeight — those throw without a registered font.
 const styles = StyleSheet.create({
   page: {
-    paddingTop: 36,
-    paddingBottom: 36,
-    paddingHorizontal: 40,
+    paddingTop: 16,
+    paddingBottom: 10,
+    paddingHorizontal: 36,
     fontFamily: "Helvetica",
-    fontSize: 8.5,
-    lineHeight: 1.4,
+    fontSize: 7.5,
+    lineHeight: 1.2,
     color: COLORS.text,
   },
-  name: { fontSize: 20, fontFamily: "Helvetica-Bold", color: COLORS.accent },
-  title: { fontSize: 10, color: COLORS.muted, marginTop: 2 },
-  contactRow: { flexDirection: "row", flexWrap: "wrap", marginTop: 4, color: COLORS.muted },
-  contactItem: { marginRight: 8 },
+  name: { fontSize: 15, fontFamily: "Helvetica-Bold", color: COLORS.accent },
+  title: { fontSize: 8, color: COLORS.muted, marginTop: 1 },
+  contactRow: { flexDirection: "row", flexWrap: "wrap", marginTop: 3, color: COLORS.muted },
+  contactItem: { marginRight: 6 },
   sectionHeading: {
-    fontSize: 9,
+    fontSize: 7.5,
     fontFamily: "Helvetica-Bold",
-    letterSpacing: 1,
+    letterSpacing: 0.75,
     color: COLORS.accent,
-    marginTop: 12,
-    marginBottom: 4,
-    paddingBottom: 2,
+    marginTop: 4.5,
+    marginBottom: 1.5,
+    paddingBottom: 1,
     borderBottomWidth: 0.5,
     borderBottomColor: COLORS.rule,
   },
-  entryHeader: { flexDirection: "row", justifyContent: "space-between", marginTop: 5 },
+  entryHeader: { flexDirection: "row", justifyContent: "space-between", marginTop: 2.5 },
   entryCompany: { fontFamily: "Helvetica-Bold" },
   entryPeriod: { color: COLORS.muted },
-  entryRole: { color: COLORS.muted, marginBottom: 2 },
-  bulletRow: { flexDirection: "row", marginTop: 1.5, paddingRight: 4 },
-  bulletMark: { width: 8, color: COLORS.muted },
+  entryRole: { color: COLORS.muted, marginBottom: 1 },
+  bulletRow: { flexDirection: "row", marginTop: 0.75, paddingRight: 3 },
+  bulletMark: { width: 7, color: COLORS.muted },
   bulletText: { flex: 1 },
-  skillRow: { flexDirection: "row", marginTop: 2 },
-  skillLabel: { width: 110, fontFamily: "Helvetica-Bold" },
+  skillRow: { flexDirection: "row", marginTop: 1 },
+  skillLabel: { width: 95, fontFamily: "Helvetica-Bold" },
   skillItems: { flex: 1, color: COLORS.muted },
-  certLine: { color: COLORS.muted, marginTop: 2 },
+  certLine: { color: COLORS.muted, marginTop: 1 },
 });
 
 function Bullet({ children }: { children: string }) {

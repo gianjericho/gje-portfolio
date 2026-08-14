@@ -1,6 +1,6 @@
 import type { ResumeData } from "../../data/resume";
 
-export const MAX_PROJECT_HIGHLIGHTS = 3;
+export const MAX_PROJECT_HIGHLIGHTS = 2;
 
 export type ResumePdfData = {
   name: string;

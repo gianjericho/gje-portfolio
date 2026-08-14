@@ -75,7 +75,7 @@ test("keeps only featured projects", () => {
 test("caps project highlights", () => {
   const result = select(fixture());
   assert.equal(result.projects[0].highlights.length, MAX_PROJECT_HIGHLIGHTS);
-  assert.deepEqual(result.projects[0].highlights, ["h1", "h2", "h3"]);
+  assert.deepEqual(result.projects[0].highlights, ["h1", "h2"]);
 });
 
 test("drops long descriptions from projects", () => {
