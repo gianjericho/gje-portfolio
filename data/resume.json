@@ -5,7 +5,7 @@
   "location": "Cavite, Philippines",
   "locationLink": "https://www.google.com/maps/place/Cavite",
   "about": "A Computer Engineer who builds enterprise-grade web and mobile applications. I specialize in transforming real-world operational bottlenecks into automated, scalable software solutions — from real-time dispatch systems to field technician mobile apps.",
-  "summary": "Currently completing my BS in Computer Engineering at Cavite State University, I've already shipped production systems that process thousands of requests. I bridge the gap between engineering theory and practical field deployment, with a focus on full-stack web development, mobile apps, and data analytics.",
+  "summary": "I hold a BS in Computer Engineering from Cavite State University and have shipped production systems that process thousands of requests. I bridge the gap between engineering theory and practical field deployment, working across full-stack web development, mobile apps, cloud security integrations, and embedded IoT.",
   "email": "gianjerichoz@gmail.com",
   "phone": "+639108733830",
   "github": "https://github.com/gianjericho",
@@ -152,7 +152,7 @@
         "Chrome Automation",
         "Data Enrichment"
       ],
-      "githubUrl": "https://github.com/gianjericho",
+      "githubUrl": "https://github.com/gianjericho/Lead-Gen",
       "liveUrl": "",
       "featured": true,
       "category": "automation",
@@ -170,22 +170,36 @@
       "company": "Jonathan & Cyber (Remote)",
       "location": "Remote",
       "role": "Contract Full-Stack Software Engineer",
-      "period": "July 2026",
+      "period": "July 2026 – Present",
       "description": [
-        "Engineered real-time SIEM/SOC dashboard features using Next.js and Supabase, implementing complex Exposed Vulnerabilities filtering arrays.",
-        "Configured Google Cloud service accounts and direct Google Sheets API integrations to automate QA bug-tracking updates.",
-        "Conducted a comprehensive codebase and infrastructure readiness audit, identifying critical data migration, mock animation, and production backup gaps.",
-        "Shipped localized database migrations (SQL schema updates) and seeded realistic test datasets to establish a production-matching preview environment."
+        "Built the multi-cloud posture layer for a multi-tenant security platform, wiring AWS Security Hub/GuardDuty, Azure Defender for Cloud, and GCP Security Command Center into a tenant-scoped findings pipeline.",
+        "Shipped the platform's first outbound integration — SIEM forwarding that pushes findings into customer-owned Splunk (HEC) and Microsoft Sentinel (Logs Ingestion API) instances.",
+        "Delivered a vendor risk intelligence module covering supply chain mapping, compliance mentions, breach monitoring, scheduled re-scans, and risk-score history.",
+        "Built phishing simulation with real delivery and open-tracking through scoped Microsoft Graph permissions, after diagnosing and abandoning a blocked third-party mail provider.",
+        "Integrated Monday.com bi-directionally on production with per-customer field visibility controls, syncing engagement work plans into the customer-facing portal.",
+        "Found and fixed a silent SSL certificate-expiry defect affecting every live customer, authored the Postgres migrations, closed a row-level security gap, and promoted releases through GitHub Actions CI on a Next.js/Supabase/Vercel stack."
+      ]
+    },
+    {
+      "company": "EagleRev (Remote)",
+      "location": "United States",
+      "role": "Client Communications and Outreach Specialist",
+      "period": "June 2026",
+      "description": [
+        "Served as the guide and primary point of contact for EagleRev's clients, walking them through LinkedIn outreach operations, campaign setup, and account questions.",
+        "Managed LinkedIn account health across a multi-profile browser fleet (GoLogin, AdsPower), triaging disconnected, restricted, and credit-exhausted accounts.",
+        "Built targeted prospect lists in Sales Navigator and manually qualified them to protect sender accounts from platform restriction.",
+        "Ran end-to-end campaign QA — variable mapping against source CSVs, message previews, and send scheduling — before release."
       ]
     },
     {
       "company": "Wiser (Remote)",
       "location": "United Kingdom",
       "role": "Lead Gen and AI Workflow Engineer",
-      "period": "July 2025 – Present",
+      "period": "July 2025 – June 2026",
       "description": [
-        "Execute B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn Sales Navigator.",
-        "Orchestrate LinkedIn outreach campaigns and account health checks using EagleRev, Gendo AI, and multi-profile browsers (GoLogin/AdsPower).",
+        "Executed B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn Sales Navigator.",
+        "Orchestrated LinkedIn outreach campaigns and account health checks using Gendo AI and multi-profile browsers (GoLogin/AdsPower).",
         "Architected Claude API workflows to automate personalized outreach and lead qualification.",
         "Managed executive prospecting and CRM data verification for global outreach campaigns."
       ]
@@ -218,7 +232,7 @@
       "institution": "Cavite State University",
       "location": "Indang, Cavite",
       "degree": "Bachelor of Science in Computer Engineering",
-      "period": "Expected June 2026",
+      "period": "June 2026",
       "details": [
         "Thesis: Design and Development of an Automated Kaong Wine Brewing System",
         "Specialized Data Analytics as Electives"
@@ -255,7 +269,9 @@
       "OpenClaw",
       "Antigravity",
       "Claude Code",
-      "Gemini"
+      "Gemini",
+      "Claude API",
+      "ElevenLabs"
     ],
     "tools": [
       "Git / GitHub",
@@ -268,7 +284,14 @@
       "Salesforce",
       "OBS Studio",
       "Firebase",
-      "Supabase"
+      "Supabase",
+      "Vercel",
+      "PostgreSQL / Row-Level Security",
+      "GitHub Actions",
+      "Microsoft Graph API",
+      "Monday.com API",
+      "Splunk",
+      "Wazuh"
     ],
     "languages": [
       "English",
