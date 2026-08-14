@@ -241,6 +241,19 @@ test("exactly one engagement is ongoing", () => {
   assert.ok(ongoing[0].company.startsWith("Jonathan & Cyber"));
 });
 
+test("closed roles do not describe themselves in present tense", () => {
+  const closed = DATA.experience.filter((e) => !e.period.includes("Present"));
+  for (const role of closed) {
+    for (const bullet of role.description) {
+      const firstWord = bullet.split(" ")[0];
+      assert.ok(
+        !["Execute", "Orchestrate", "Manage", "Build", "Lead"].includes(firstWord),
+        `"${role.company}" ended but a bullet opens with present-tense "${firstWord}"`,
+      );
+    }
+  }
+});
+
 test("the CYBEREYE engagement reflects its real scope", () => {
   const current = DATA.experience.find((e) => e.company.startsWith("Jonathan & Cyber"));
   assert.ok(current, "expected a Jonathan & Cyber experience entry");
@@ -271,7 +284,7 @@ test("the lead-gen project links to its real repository", () => {
 - [ ] **Step 2: Run the tests to verify they fail**
 
 Run: `npm test`
-Expected: FAIL. Six new failures — no EagleRev entry exists, Wiser says `July 2025 – Present`, two entries would match `Present`, Jonathan & Cyber has four bullets, education says `Expected June 2026`, and the Lead-Gen URL is a bare profile.
+Expected: FAIL. Seven new failures — no EagleRev entry exists, Wiser says `July 2025 – Present`, two entries would match `Present`, two closed roles open bullets with present-tense verbs, Jonathan & Cyber has four bullets, education says `Expected June 2026`, and the Lead-Gen URL is a bare profile.
 
 - [ ] **Step 3: Rewrite the summary**
 
@@ -323,17 +336,19 @@ Insert this object immediately after the Jonathan & Cyber object and before the 
 
 - [ ] **Step 6: Close out the Wiser entry**
 
-In the Wiser object, change the period and rewrite the second bullet so EagleRev no longer appears as one of Gian's tools:
+Change the period, drop EagleRev from the second bullet, and shift the first two bullets to past tense — the role is closed now, and "Execute"/"Orchestrate" would read as ongoing work:
 
 ```json
       "period": "July 2025 – June 2026",
       "description": [
-        "Execute B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn Sales Navigator.",
-        "Orchestrate LinkedIn outreach campaigns and account health checks using Gendo AI and multi-profile browsers (GoLogin/AdsPower).",
+        "Executed B2B lead generation and data enrichment using Apollo.io, Prospeo, and LinkedIn Sales Navigator.",
+        "Orchestrated LinkedIn outreach campaigns and account health checks using Gendo AI and multi-profile browsers (GoLogin/AdsPower).",
         "Architected Claude API workflows to automate personalized outreach and lead qualification.",
         "Managed executive prospecting and CRM data verification for global outreach campaigns."
       ]
 ```
+
+The Jonathan & Cyber entry stays in past tense for completed deliverables — that is standard resume voice and correct even for an ongoing role.
 
 - [ ] **Step 7: Mark the degree complete**
 
@@ -381,7 +396,7 @@ Append to the `"tools"` array, after `"Supabase"`:
 - [ ] **Step 10: Run the tests to verify they pass**
 
 Run: `npm test`
-Expected: PASS, 10/10.
+Expected: PASS, 11/11.
 
 - [ ] **Step 11: Verify the JSON is well-formed and types compile**
 
@@ -595,7 +610,7 @@ Append to the `"projects"` array in `data/resume.json`, after the `b2b-lead-gen-
 - [ ] **Step 4: Run the test to verify it passes**
 
 Run: `npm test`
-Expected: PASS, 12/12. The category-validity test from Task 1 also now exercises `"media"`.
+Expected: PASS, 13/13. The category-validity test from Task 1 also now exercises `"media"`.
 
 - [ ] **Step 5: Add media support to the projects component**
 
@@ -1081,7 +1096,7 @@ Note on the skill-group order test: the expected output in Step 1 lists Language
 - [ ] **Step 4: Run the tests to verify they pass**
 
 Run: `npm test`
-Expected: PASS, 22/22 (12 data-integrity plus 10 curation).
+Expected: PASS, 23/23 (13 data-integrity plus 10 curation).
 
 - [ ] **Step 5: Verify types compile**
 
@@ -1367,7 +1382,7 @@ Add to `"scripts"` in `package.json`:
 - [ ] **Step 7: Run the tests to verify they pass**
 
 Run: `npm test`
-Expected: PASS, 24/24. If the single-page assertion fails, open the generated PDF, find what overflowed, and either trim bullet copy in `data/resume.json` or reduce `MAX_PROJECT_HIGHLIGHTS` in `scripts/resume-pdf/select.ts`. Do not weaken the assertion.
+Expected: PASS, 25/25. If the single-page assertion fails, open the generated PDF, find what overflowed, and either trim bullet copy in `data/resume.json` or reduce `MAX_PROJECT_HIGHLIGHTS` in `scripts/resume-pdf/select.ts`. Do not weaken the assertion.
 
 - [ ] **Step 8: Inspect the PDF by eye**
 
@@ -1429,7 +1444,7 @@ at the repo root."
 
 Run after all seven tasks:
 
-- [ ] `npm test` — 24 passing
+- [ ] `npm test` — 25 passing
 - [ ] `npx tsc --noEmit` — clean
 - [ ] `npm run lint` — clean
 - [ ] `rm -f public/Resume.pdf && npm run build` — regenerates the PDF, build succeeds
