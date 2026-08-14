@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   bulletMark: { width: 7, color: COLORS.muted },
   bulletText: { flex: 1 },
   skillRow: { flexDirection: "row", marginTop: 1 },
-  skillLabel: { width: 95, fontFamily: "Helvetica-Bold" },
+  skillLabel: { width: 108, fontFamily: "Helvetica-Bold" },
   skillItems: { flex: 1, color: COLORS.muted },
   certLine: { color: COLORS.muted, marginTop: 1 },
 });
