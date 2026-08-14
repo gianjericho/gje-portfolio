@@ -20,6 +20,9 @@
 /.next/
 /out/
 
+# generated resume (rebuilt by prebuild from data/resume.json)
+/public/Resume.pdf
+
 # production
 /build
 
